@@ -35,3 +35,30 @@ function calculateTotal() {
     if(decDisplay) decDisplay.innerText = total;
     if(hexDisplay) hexDisplay.innerText = "0x" + total.toString(16).toUpperCase();
 }
+// Add this to your <script> tag
+const resetBtn = document.getElementById('reset-btn');
+
+if (resetBtn) {
+    resetBtn.addEventListener('click', function() {
+        console.log("Resetting System...");
+
+        // 1. Find all bits and turn them off
+        const allBits = document.querySelectorAll('.bit-card');
+        allBits.forEach(bit => {
+            bit.classList.remove('active');
+            bit.innerText = "0";
+        });
+
+        // 2. Reset the display numbers to zero
+        document.getElementById('dec-out').innerText = "0";
+        document.getElementById('hex-out').innerText = "0x00";
+        
+        // Check if char-out exists before resetting
+        const charOut = document.getElementById('char-out');
+        if (charOut) charOut.innerText = "N/A";
+
+        console.log("System Ready.");
+    });
+} else {
+    console.error("Could not find the reset-btn in HTML!");
+}

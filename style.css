@@ -1,0 +1,89 @@
+:root {
+    --neon-green: #39ff14;
+    --dark-bg: #0a0a0a;
+    --bit-off: #1a1a1a;
+}
+
+body {
+    background: var(--dark-bg);
+    color: var(--neon-green);
+    font-family: 'Courier New', monospace;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    margin: 0;
+}
+
+.byte-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.bit-card {
+    width: 60px;
+    height: 80px;
+    border: 2px solid var(--neon-green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: 0.2s;
+    user-select: none;
+}
+
+/* Active State for Bits */
+.bit-card.active {
+    background: var(--neon-green);
+    color: var(--dark-bg);
+    box-shadow: 0 0 15px var(--neon-green);
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.stat-box {
+    text-align: center;
+}
+
+.stat-box label {
+    display: block;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.stat-box span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.bit-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.weight {
+    font-size: 0.8rem;
+    color: #444; /* Darker green or gray */
+}
+
+#reset-btn {
+    margin-top: 30px;
+    background: transparent;
+    color: #ff4444; /* Red for reset */
+    border: 1px solid #ff4444;
+    padding: 10px 20px;
+    font-family: 'Courier New', monospace;
+    cursor: pointer;
+}
+
+#reset-btn:hover {
+    background: #ff4444;
+    color: #000;
+}

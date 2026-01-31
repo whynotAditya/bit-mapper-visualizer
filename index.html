@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BIT_MAPPER // Logic Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="crt-overlay"></div>
+    
+    <div class="app-container">
+        <header>
+            <h1>BINARY_VISUALIZER_v1.0</h1>
+            <p>Toggle bits to see real-time conversion</p>
+        </header>
+
+        <div class="visualizer-section">
+         <div class="byte-row">
+    <div class="bit-container"><span class="weight">128</span><div class="bit-card" data-weight="128">0</div></div>
+    <div class="bit-container"><span class="weight">64</span><div class="bit-card" data-weight="64">0</div></div>
+    <div class="bit-container"><span class="weight">32</span><div class="bit-card" data-weight="32">0</div></div>
+    <div class="bit-container"><span class="weight">16</span><div class="bit-card" data-weight="16">0</div></div>
+    <div class="bit-container"><span class="weight">8</span><div class="bit-card" data-weight="8">0</div></div>
+    <div class="bit-container"><span class="weight">4</span><div class="bit-card" data-weight="4">0</div></div>
+    <div class="bit-container"><span class="weight">2</span><div class="bit-card" data-weight="2">0</div></div>
+    <div class="bit-container"><span class="weight">1</span><div class="bit-card" data-weight="1">0</div></div>
+</div>
+
+<button id="reset-btn">RESET_SYSTEM</button>
+
+            <div class="stats-container">
+                <div class="stat-box">
+                    <label>DECIMAL</label>
+                    <span id="dec-out">0</span>
+                </div>
+                <div class="stat-box">
+                    <label>HEX</label>
+                    <span id="hex-out">0x00</span>
+                </div>
+                <div class="stat-box">
+                    <label>CHAR</label>
+                    <span id="char-out">NULL</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
