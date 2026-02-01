@@ -87,3 +87,8 @@ body {
     background: #ff4444;
     color: #000;
 }
+.bit-card:hover {
+    border-color: #fff;
+    box-shadow: 0 0 10px var(--neon-green);
+    transform: scale(1.05); /* Makes the bit pop out slightly */
+}
