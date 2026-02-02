@@ -92,3 +92,4 @@ body {
     box-shadow: 0 0 10px var(--neon-green);
     transform: scale(1.05); /* Makes the bit pop out slightly */
 }
+/* Responsive Design */
